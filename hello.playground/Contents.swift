@@ -168,3 +168,23 @@ for i in 2...9 {
     }
     print("=====================")
 }
+
+//while: 특정 조건을 이용, 또는 무한 루프 등을 구현할 때 사용
+
+var count = 10
+
+print("ready to countdown")
+
+while count > 0 {
+    print("\(count)...")
+    count -= 1
+}
+
+print("good to go")
+
+//iOS에서 조건문을 잘못 사용해 무한루프가 생길경우 크래시가 날 수 있다.
+//여기서부터 좀 생소한 내용 스타트. 옵셔널, 클로저 등등
+
+//옵셔널Optional
+
+
