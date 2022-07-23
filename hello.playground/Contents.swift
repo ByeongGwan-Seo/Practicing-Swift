@@ -36,16 +36,16 @@ var greeting = "Hello, playground"
 //
 ////dictionary (key : value)
 //
-//let languageCode = [
-//    "korea":"kor",
-//    "japan":"jp",
-//    "english":"en"
-//]
-//
-//let lc = languageCode["korea"]
-//
-//print(lc)
-////왜 Optional("kor")이 나오는걸까...?
+let languageCode = [
+    "korea":"kor",
+    "japan":"jp",
+    "english":"en"
+]
+
+let lc = languageCode["korea"]
+
+print(lc)
+//왜 Optional("kor")이 나오는걸까...? -> 상수 lc의 타입이 옵셔널이다. (자료형)? 형태. 딕셔너리 내부의 값 타입은 옵셔널이다. 있을 수도 있고 없을 수도 있고(자세한 내용은 제 자서전...)
 //
 ////초기화
 //var emptyArr: [Int] = []
@@ -186,5 +186,41 @@ print("good to go")
 //여기서부터 좀 생소한 내용 스타트. 옵셔널, 클로저 등등
 
 //옵셔널Optional
+//값이 있을 수도 있고 없을 수도 있다?
 
+let languageCode2 = [
+    "kor" : "kr",
+    "eng" : "us",
+    "jpn" : "jp"
+]
+
+let krCode = languageCode2["kor"]
+let enCode = languageCode2["eng"]
+let deCode = languageCode2["deu"]
+
+//let krCode: String? -> ?는 Optional 타입이다.
+//대체 이런게 이런게 왜 존재하는 것인가? -> swift에서의 nil(null)의 존재에 대한 이해가 필요
+//스위프트에서의 nil이란?
+//스위프트는 프로그램의 안정성을 극도로 추구하는 언어이기 때문에 오류를 발생시키는 것을 피하고자 함.
+//때문에 오류가 아닌 nil값을 리턴함으로서 개발자에게 "여기 문제있다"를 알리는 것.
+
+//근데 이게 Optional이랑 뭔 상관?
+//오직 Optional 타입만 nil값을 반환할 수 있다. 일반 자료형은 nil값을 리턴할 수 없다. 때문에 오류 발생의 소지가 조금이라도 있으면 Optional로 정의해야 한다.
+
+print(krCode) //Optional("kr")
+print(deCode) //nil
+
+//이름이 있을 수도 있고 없을 수도 있는 타입 선언 -> (자료형)?
+
+var name: String? = nil //변수 name의 value가 있을 수도 있고 없을 수도 있으므로 Optional타입 선언
+
+name = "gom"
+
+print(name) //Optional("gom")
+
+name = nil
+
+print(name) //nil
+
+//이 타입이 실무에서 어떻게 사용되는지는 직접 프로젝트를 진행하던가 해야 알 수 있을 것 같다.
 
