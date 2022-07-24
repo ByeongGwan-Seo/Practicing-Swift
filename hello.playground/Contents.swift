@@ -364,7 +364,7 @@ class Employee {
     var name: String
     var hours: Int
     
-    //생성자
+    //생성자, 구조체는 이 부분이 없어도 만들 수 있지만 클래스는 이 부분을 작업자가 직접 만들어야 한다.
     init(name: String, hours: Int) {
         self.name = name
         self.hours = hours
