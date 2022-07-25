@@ -414,6 +414,7 @@ iPhone2.modelName = "iPhone 14"
 print(iPhone2.modelName)
 print(iPhone1.modelName)
 print("---------------------")
+// 아이폰1과 아이폰2는 다른 객체
 
 var jrDeveloper1 = iOSDeveloper(name: "john", hours: 8)
 var jrDeveloper2 = jrDeveloper1
@@ -421,3 +422,4 @@ jrDeveloper1.name = "Kenny"
 print(jrDeveloper1.name)
 print(jrDeveloper2.name)
 print("---------------------")
+// 개발1과 개발2는 같은 객체. 따라서 하나를 변경하면 하나도 주르륵.
