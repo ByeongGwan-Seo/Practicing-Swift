@@ -40,16 +40,26 @@ extension StockRankViewController: UICollectionViewDataSource {
         return stockList.count
     }
     
+    //guard <꼭 참이어야 하는 조건> else { return ....}
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         //재사용 가능한 셀을 가져오겠다. -> 구분자를 통해 가져올 수 있음.(identifier)
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StockRankCollectionViewCell", for: indexPath)
-        return cell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StockRankCollectionViewCell", for: indexPath) as? StockRankCollectionViewCell else {
+            return UICollectionViewCell()
+        }
         
-//        return UICollectionViewCell()
+        let stock = stockList[indexPath.item]
+        cell.configure(stock)
+        return cell
     }
 }
 
+//Delegate... -> UI를 어떻게 배치할 것인지에 대한 답을 알고 있는 친구 -> 프로토콜이라 지켜야할 약속이 있다. 닉값하네.
 extension StockRankViewController: UICollectionViewDelegateFlowLayout {
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        //width == collectionView
+        //height == 80
+        
+        return CGSize(width: collectionView.bounds.width, height: 80)
+    }
 }
