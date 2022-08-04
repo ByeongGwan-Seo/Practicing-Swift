@@ -27,3 +27,46 @@ let halfOfNum = otherNum / 2
 print(num)
 print(greeting)
 print(name)
+
+protocol ScheduleDelegate {
+    func gotoSchool()
+    func lunchTime()
+    func afterSchool()
+}
+
+class NamJu {
+    var girlFriend: ScheduleDelegate? = nil
+    func oneday() {
+        if let gf = self.girlFriend {
+            gf.gotoSchool()
+            gf.lunchTime()
+            gf.afterSchool()
+        } else {
+            print("bicycle alone")
+            print("alone eat")
+            print("going home alone")
+        }
+    }
+}
+
+class GirlFriend:ScheduleDelegate {
+    func gotoSchool() {
+        print("together subway")
+    }
+    func lunchTime() {
+        print("eat together")
+    }
+    func afterSchool() {
+        print("go to theater")
+    }
+}
+
+var namJu = NamJu()
+var girl = GirlFriend()
+
+print("without gf")
+namJu.oneday()
+namJu.girlFriend = girl
+print("with gf")
+namJu.oneday()
+
