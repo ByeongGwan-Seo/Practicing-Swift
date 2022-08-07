@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		06CC254A289970820050C9EE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CC2549289970820050C9EE /* SearchViewController.swift */; };
 		06CC254C2899719B0050C9EE /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CC254B2899719B0050C9EE /* ResultCell.swift */; };
+		06CC254E289C1ACD0050C9EE /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CC254D289C1ACD0050C9EE /* NewsFeedViewController.swift */; };
+		06CC2550289C1B590050C9EE /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CC254F289C1B590050C9EE /* FeedCell.swift */; };
 		948CD22D2812F01B003DC0C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948CD22C2812F01B003DC0C4 /* AppDelegate.swift */; };
 		948CD22F2812F01B003DC0C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948CD22E2812F01B003DC0C4 /* SceneDelegate.swift */; };
 		948CD2342812F01B003DC0C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948CD2322812F01B003DC0C4 /* Main.storyboard */; };
@@ -39,6 +41,8 @@
 /* Begin PBXFileReference section */
 		06CC2549289970820050C9EE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		06CC254B2899719B0050C9EE /* ResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
+		06CC254D289C1ACD0050C9EE /* NewsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
+		06CC254F289C1B590050C9EE /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		948CD2292812F01B003DC0C4 /* InstaSearchView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaSearchView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		948CD22C2812F01B003DC0C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		948CD22E2812F01B003DC0C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 				948CD22C2812F01B003DC0C4 /* AppDelegate.swift */,
 				948CD22E2812F01B003DC0C4 /* SceneDelegate.swift */,
 				948CD2322812F01B003DC0C4 /* Main.storyboard */,
+				06CC254D289C1ACD0050C9EE /* NewsFeedViewController.swift */,
+				06CC254F289C1B590050C9EE /* FeedCell.swift */,
 				06CC254B2899719B0050C9EE /* ResultCell.swift */,
 				06CC2549289970820050C9EE /* SearchViewController.swift */,
 				948CD2352812F01B003DC0C4 /* Assets.xcassets */,
@@ -265,6 +271,8 @@
 				948CD22D2812F01B003DC0C4 /* AppDelegate.swift in Sources */,
 				06CC254C2899719B0050C9EE /* ResultCell.swift in Sources */,
 				948CD22F2812F01B003DC0C4 /* SceneDelegate.swift in Sources */,
+				06CC254E289C1ACD0050C9EE /* NewsFeedViewController.swift in Sources */,
+				06CC2550289C1B590050C9EE /* FeedCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
