@@ -67,6 +67,11 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="211" height="532"/>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="WYp-F5-6Ng" id="nUC-ZM-0ls"/>
+                                            <outlet property="thumbnailImageView" destination="9RP-rN-KuF" id="Gr6-d7-gKB"/>
+                                            <outlet property="titleLabel" destination="ouK-Pl-AcH" id="dGs-bd-MHp"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -80,6 +85,9 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="sIX-jz-kRV" secondAttribute="bottom" id="bZd-EX-uu7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="sIX-jz-kRV" id="Rp7-mV-Yoe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
