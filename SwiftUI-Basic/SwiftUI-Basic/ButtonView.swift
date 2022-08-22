@@ -22,8 +22,6 @@ struct ButtonView: View {
         .frame(height: 100)
         .background(.pink)
         .cornerRadius(20)
-        .opacity(0.3)
-
     }
 }
 
