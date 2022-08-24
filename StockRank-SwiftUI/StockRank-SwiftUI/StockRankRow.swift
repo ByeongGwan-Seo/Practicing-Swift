@@ -45,7 +45,7 @@ struct StockRankRow: View {
                 .foregroundColor(.gray)
         }
         .padding()
-        .frame(maxWidth: .infinity)
+        .frame(maxWidth: .infinity, minHeight: .infinity)
         .background(.black)
     }
 }
