@@ -12,6 +12,9 @@ struct FrameworkListView: View {
     @State var list: [AppleFramework] = AppleFramework.list
     
     let layout: [GridItem] = [
+//        GridItem(.fixed(70)),
+//        GridItem(.adaptive(minimum: 80)),
+//
         GridItem(.flexible()),
         GridItem(.flexible()),
         GridItem(.flexible()),
