@@ -2,14 +2,14 @@
 //  StockRankRow.swift
 //  StockRank-SwiftUI
 //
-//  Created by seobyeonggwan on 2022/08/23.
+//  Created by joonwon lee on 2022/06/01.
 //
 
 import SwiftUI
 
 struct StockRankRow: View {
     
-    var stock: StockModel
+    @Binding var stock: StockModel
     
     var body: some View {
         HStack {
@@ -28,8 +28,8 @@ struct StockRankRow: View {
                 HStack {
                     Text("\(stock.price) 원")
                         .font(.system(size: 12))
-                        .foregroundColor(.white)
-                    Text("\(stock.diff * 100, specifier: "%.2f") %")
+                        .foregroundColor(.gray)
+                    Text("\(stock.diff * 100, specifier: "%.2f")  %")
                         .font(.system(size: 12))
                         .foregroundColor(stock.diff > 0 ? .red : .blue)
                 }
@@ -43,15 +43,17 @@ struct StockRankRow: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 40, height: 40)
                 .foregroundColor(.gray)
+                
         }
         .padding()
-        .frame(maxWidth: .infinity, minHeight: .infinity)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(.black)
     }
 }
 
 struct StockRankRow_Previews: PreviewProvider {
     static var previews: some View {
-        StockRankRow(stock: StockModel.list[0])
+        StockRankRow(stock: .constant(StockModel.list[2]))
+            .previewLayout(.fixed(width: 390, height: 80))
     }
 }
