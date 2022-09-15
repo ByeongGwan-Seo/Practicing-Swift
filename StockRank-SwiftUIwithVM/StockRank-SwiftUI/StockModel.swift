@@ -7,20 +7,17 @@
 
 import Foundation
 
-struct StockModel: Hashable, Identifiable {
-    var id: String {
-        return name
-    }
-//    var id: UUID = UUID()
+struct StockModel: Hashable, Identifiable {    
+    var id: UUID = UUID()
     
     let rank: Int
     let imageName: String
     let name: String
     let price: Int
     let diff: Double
+    
+    var isFavorite: Bool = false
 }
-
-//모델이나 로직처리는 for example 별도의 라이브러리를 만들어서 거기에 로직과 모델을 모아놓고 있음.
 
 extension StockModel {
     static let list: [StockModel] = [

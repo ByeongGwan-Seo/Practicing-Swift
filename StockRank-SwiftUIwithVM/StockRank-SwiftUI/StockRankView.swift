@@ -9,14 +9,12 @@ import SwiftUI
 
 struct StockRankView: View {
     
-    //list가 계속 감지가 되고 있는 상황 @state 프로퍼티래퍼로.
-    //초기화를 해줘야함. StockModel.list로 초기화된 상태.
-    
-    @State var list = StockModel.list
+//    @State var list = StockModel.list
+    @StateObject var vm = StockRankViewModel()
     
     var body: some View {
         NavigationView {
-            List($list) { $item in
+            List($vm.models) { $item in
                 ZStack {
                     NavigationLink {
                         StockDetailView(stock: $item)
